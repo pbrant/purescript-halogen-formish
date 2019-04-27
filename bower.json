@@ -1,0 +1,27 @@
+{
+  "name": "purescript-halogen-formlet",
+  "description": "form experiments",
+  "authors": [
+    "Peter Brant <peter.brant@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pbrant/purescript-halogen-formlet.git"
+  },
+  "license": "BSD-3-Clause",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-halogen": "^5.0.0-rc.4",
+    "purescript-prelude": "^4.0.0",
+    "purescript-profunctor-lenses": "^6.1.0",
+    "purescript-variant": "^6.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^4.0.0"
+  }
+}
