@@ -1,12 +1,12 @@
 {
-  "name": "purescript-halogen-formlet",
+  "name": "purescript-halogen-formish",
   "description": "form experiments",
   "authors": [
     "Peter Brant <peter.brant@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/pbrant/purescript-halogen-formlet.git"
+    "url": "git://github.com/pbrant/purescript-halogen-formish.git"
   },
   "license": "BSD-3-Clause",
   "ignore": [
@@ -20,7 +20,6 @@
     "purescript-halogen": "^5.0.0-rc.4",
     "purescript-prelude": "^4.0.0",
     "purescript-profunctor-lenses": "^6.1.0",
-    "purescript-validation": "^4.2.0",
     "purescript-variant": "^6.0.0"
   },
   "devDependencies": {
