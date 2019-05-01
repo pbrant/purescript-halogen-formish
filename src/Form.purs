@@ -1,5 +1,5 @@
 module Form
- ( Env(..)
+  ( Env(..)
   , Field(..)
   , Form(..)
   , FormAction(..)
@@ -47,10 +47,6 @@ import Halogen.HTML as HH
 import Halogen.HTML.Events as HE
 import Halogen.HTML.Properties as HP
 import Halogen.HTML.Properties.ARIA as ARIA
-
--- See
--- https://medium.com/fuzzy-sharp/building-a-type-safe-embedded-dsl-for-form-components-with-validation-e7ffaaf537e4
--- for details
 
 type UIConfig =
   { required :: Boolean
