@@ -16,9 +16,11 @@
     "output"
   ],
   "dependencies": {
+    "purescript-debug": "4.0.0",
     "purescript-halogen": "^5.0.0-rc.4",
     "purescript-prelude": "^4.0.0",
     "purescript-profunctor-lenses": "^6.1.0",
+    "purescript-validation": "^4.2.0",
     "purescript-variant": "^6.0.0"
   },
   "devDependencies": {
