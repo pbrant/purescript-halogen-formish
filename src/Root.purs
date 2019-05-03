@@ -2,6 +2,8 @@ module Root where
 
 import Prelude
 
+import Data.Generic.Rep (class Generic)
+import Data.Generic.Rep.Show (genericShow)
 import Data.Lens (Prism', prism', (%=))
 import Data.Lens.Record (prop)
 import Data.Maybe (Maybe(..))
@@ -18,6 +20,15 @@ import Web.Event.Event (preventDefault)
 import Web.UIEvent.MouseEvent (MouseEvent)
 import Web.UIEvent.MouseEvent (toEvent) as MouseEvent
 
+data Color
+  = Red
+  | Blue
+  | Green
+derive instance eqColor :: Eq Color
+derive instance genericColor :: Generic Color _
+instance showColor :: Show Color where
+  show = genericShow
+
 type AddressForm =
   { address :: F.Field String
   , city :: F.Field String
@@ -31,7 +42,7 @@ type DemoForm =
   , nameL :: F.Field String
   , password :: F.Field String
   , passwordConfirmation :: F.Field String
-  , favoriteColor :: F.Field (Maybe String)
+  , favoriteColor :: F.Field (Maybe Color)
   , primaryAddress :: AddressForm
   , otherAddresses :: Array AddressForm
   }
@@ -41,7 +52,7 @@ type DemoResult =
   , nameM :: Maybe String
   , nameL :: String
   , password :: String
-  , favoriteColor :: Maybe String
+  , favoriteColor :: Maybe Color
   , primaryAddress :: Address
   , otherAddresses :: Array Address
   }
@@ -178,9 +189,9 @@ form = ado
     F.focus (prop (SProxy :: _ "favoriteColor"))
       $ F.radioList
           "Favorite color"
-          [ Tuple "red" "Red"
-          , Tuple "blue" "Blue"
-          , Tuple "green" "Green"
+          [ Tuple Red "Red"
+          , Tuple Blue "Blue"
+          , Tuple Green "Green"
           ]
   F.content
     [ HH.h4_
